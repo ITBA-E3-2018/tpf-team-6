@@ -1,0 +1,59 @@
+$date
+	Mon Nov 05 22:53:55 2018
+$end
+$version
+	Icarus Verilog
+$end
+$timescale
+	1s
+$end
+$scope module hello_world $end
+$var wire 1 ! min_clk $end
+$var reg 1 " dummy $end
+$var reg 513 # dumpfile_path [512:0] $end
+$scope module min_gen $end
+$var reg 1 ! min_clk $end
+$scope begin CLOCK_DRIVER $end
+$upscope $end
+$upscope $end
+$upscope $end
+$enddefinitions $end
+#0
+$dumpvars
+b1101111011101010111010001110000011101010111010000101110011101100110001101100100 #
+0"
+0!
+$end
+#60
+1!
+#120
+0!
+#180
+1!
+#240
+0!
+#300
+1!
+#360
+0!
+#420
+1!
+#480
+0!
+#540
+1!
+#600
+0!
+#660
+1!
+#720
+0!
+#780
+1!
+#840
+0!
+#900
+1!
+#960
+0!
+#1000
