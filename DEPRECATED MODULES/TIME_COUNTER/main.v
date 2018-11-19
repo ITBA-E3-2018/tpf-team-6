@@ -13,7 +13,7 @@ module hello_world;
   min_clock_gen min_clk_gen(clk_min);
   sec_clock_gen sec_clk_gen(clk_sec);
 
-  reg reset = 0;
+  //reg reset = 0;
 
   wire[7:0] seconds;
   wire[7:0] minutes;

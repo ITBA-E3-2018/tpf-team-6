@@ -2,20 +2,21 @@
 `timescale 100us / 100us //CLOCK FREQUENCY = 40*timescale--> 40*100us == 1/250 --> se necesitan 250 pulsos para hacer 1 segundo
 module hello_world;
 
-
   // My signal definitions
   wire clk;
   wire reset;
-  wire[5:0]secs  = 0 ;
-  wire[5:0]mins  = 0;
-  wire[5:0]hours = 0;
+  wire[7:0]seconds;
+  wire[7:0]minutes;
+  wire[7:0]hours;
 
-  //MODULE   NAME
-  clock_gen clk_gen(clk);
-  time_counter t_counter(secs,mins,hours,reset,clk);
+//Modules
+  clock_gen clk_gen(clk); 
+  time_counter t_counter(seconds,minutes,hours,reset,clk);
+
+
   initial begin
 
-    #30000;
+    #1000000;
     $finish;
 
   end
