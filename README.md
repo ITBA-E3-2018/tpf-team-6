@@ -17,7 +17,7 @@
 </h1>
 <h2>¿De qué se trata?</h2>
 El tp final de Electronica III se basa en desarrollar un cronómetro utilizando un lenguaje de descripción de hardware, 
-<a target="_blank" href ="https://en.wikipedia.org/wiki/Hardware_description_language">HDL</a> por sus siglas en ingles. En nuestro caso empleamos 
+<a  href ="https://en.wikipedia.org/wiki/Hardware_description_language" target="_blank">HDL</a> por sus siglas en ingles. En nuestro caso empleamos 
 <a target="_blank" href ="https://es.wikipedia.org/wiki/Verilog"> Verilog</a>.
 <br> 
 El cronómetro opera sobre una <a target="_blank" href ="https://www.intel.com/content/www/us/en/products/programmable/fpga/cyclone-iv.html">FPGA Cyclone IV</a>.
