@@ -4,19 +4,24 @@ module hello_world;
 
   // My signal definitions
   wire clk;
-  wire reset;
+  reg reset = 0; 
+  reg startStop = 0; //
   wire[7:0]seconds;
   wire[7:0]minutes;
   wire[7:0]hours;
 
 //Modules
   clock_gen clk_gen(clk); 
-  time_counter t_counter(seconds,minutes,hours,reset,clk);
+  time_counter t_counter(seconds,minutes,hours,reset,startStop,clk);
 
 
   initial begin
 
-    #1000000;
+    #800000;
+    reset = 1;
+    #10
+    reset = 0;
+    #20000
     $finish;
 
   end

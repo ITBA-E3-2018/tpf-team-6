@@ -1,5 +1,14 @@
-module time_counter(seconds,minutes,hours,reset,clock);
+//This module has the job of counting time, its outputs: seconds,minutes and hours are 8 bits long
+//Let's describe its inputs
+//RESET: When "reset" is high the counters will go to zero in an asynchronous way.
+//START_STOP: When startStop changes its statuts the counting will start or stop arcodingly
+
+
+
+module time_counter(seconds,minutes,hours,reset,startStop,clock);
+	reg keepCounting  = 1;
 	input wire reset;
+	input wire startStop;
 	input wire clock;
 	
 	//Keeping track of the seconds ellapsed (MAX SECONDS = 59)
@@ -21,27 +30,37 @@ module time_counter(seconds,minutes,hours,reset,clock);
 	
 	//Detection of falling edge in clk_sec singal
 	always @(posedge clock)
-	begin
-		counter += 1;
-		//If the counter has reached de second reference we add +1 seconds
-		if(counter == secondReference)begin
-			counter = 0; // Reset counter
-			seconds <= seconds + 1;			//Counts a new second after "secondReference" clock pulses
-
-			if(seconds == 59)  //If seconds limit has been reached, then reset
+		begin
+			counter += 1;
+			//If the counter has reached de second reference we add +1 seconds
+			if(counter == secondReference)
 			begin
+				counter = 0; // Reset counter
+				seconds <= seconds + 1;			//Counts a new second after "secondReference" clock pulses
+
+				if(seconds == 59)  //If seconds limit has been reached, then reset
 				begin
-					seconds <= 0;
-					minutes <= minutes + 1;
-				end
-				if(minutes == 59)	//If minutes limit has been reached, then reset and add +1 Hour
 					begin
-						minutes <= 0;
-						hours <= hours + 1;
+						seconds <= 0;
+						minutes <= minutes + 1;
 					end
-						if(hours == 99)
-							hours <= 0;
+					if(minutes == 59)	//If minutes limit has been reached, then reset and add +1 Hour
+						begin
+							minutes <= 0;
+							hours <= hours + 1;
+						end
+							if(hours == 99)
+								hours <= 0;
+				end
 			end
 		end
-	end
+
+//When reset is pressed all values go to zero 
+	always@(posedge reset)
+		begin
+			counter = 0;
+			seconds <= 0;
+			minutes <= 0;
+			hours	<=0;
+		end
 endmodule
