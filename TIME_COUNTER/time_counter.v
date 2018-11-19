@@ -6,6 +6,7 @@
 
 
 module time_counter(seconds,minutes,hours,reset,startStop,clock);
+	parameter yes = 1;
 	reg keepCounting  = 1;
 	input wire reset;
 	input wire startStop;
@@ -28,29 +29,32 @@ module time_counter(seconds,minutes,hours,reset,startStop,clock);
 	// parameter secondReference = 25*(10^6);	//CAMBIAR CUANDO SE PASA A QUARTUS. Amount of clock ticks that represent a SECOND
 	parameter secondReference = 250; //!<-- AHI!
 	
-	//Detection of falling edge in clk_sec singal
+	//Detection of rising edge in clk_sec singal
 	always @(posedge clock)
 		begin
-			counter += 1;
-			//If the counter has reached de second reference we add +1 seconds
-			if(counter == secondReference)
-			begin
-				counter = 0; // Reset counter
-				seconds <= seconds + 1;			//Counts a new second after "secondReference" clock pulses
-
-				if(seconds == 59)  //If seconds limit has been reached, then reset
+		if(keepCounting == yes)
+		begin
+				counter += 1;
+				//If the counter has reached de second reference we add +1 seconds
+				if(counter == secondReference)
 				begin
+					counter = 0; // Reset counter
+					seconds <= seconds + 1;			//Counts a new second after "secondReference" clock pulses
+
+					if(seconds == 59)  //If seconds limit has been reached, then reset
 					begin
-						seconds <= 0;
-						minutes <= minutes + 1;
-					end
-					if(minutes == 59)	//If minutes limit has been reached, then reset and add +1 Hour
 						begin
-							minutes <= 0;
-							hours <= hours + 1;
+							seconds <= 0;
+							minutes <= minutes + 1;
 						end
-							if(hours == 99)
-								hours <= 0;
+						if(minutes == 59)	//If minutes limit has been reached, then reset and add +1 Hour
+							begin
+								minutes <= 0;
+								hours <= hours + 1;
+							end
+								if(hours == 99)
+									hours <= 0;
+					end
 				end
 			end
 		end
@@ -63,4 +67,7 @@ module time_counter(seconds,minutes,hours,reset,startStop,clock);
 			minutes <= 0;
 			hours	<=0;
 		end
+//When StartStop signal change it will start or either stop the counting
+always@(posedge startStop)
+	keepCounting = ~keepCounting;
 endmodule

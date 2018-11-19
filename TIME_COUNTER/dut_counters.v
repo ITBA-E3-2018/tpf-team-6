@@ -17,9 +17,17 @@ module hello_world;
 
   initial begin
 
-    #800000;
+    #500000;
+    startStop  = 1;
+    #100
+    startStop  = 0;
+    #40000    
+    startStop  = 1;
+    #100
+    startStop  = 0;
+    #100000
     reset = 1;
-    #10
+    #100
     reset = 0;
     #20000
     $finish;
