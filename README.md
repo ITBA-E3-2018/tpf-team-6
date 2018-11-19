@@ -4,15 +4,16 @@
 </div>
 <h1>
     <div align="center">
-      <b>TP FINAL</b>
+      <b>TP FINAL</b></br>
+        </br>
+      <b>ELECTRONICA III</b>
+        </br>
     </div>
   </br>
    <div align="center">
       <b>CRONÓMETRO EN FPGA + VGA</b>
     </div>
-  </br>
-    <div align="center"><b>ELECTRONICA III</b></div>
-  </br>
+  
 </h1>
 <h2>¿De qué se trata?</h2>
 El tp final de Electronica III se basa en desarrollar un cronómetro utilizando un lenguaje de descripción de hardware, 
