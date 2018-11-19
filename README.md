@@ -1,5 +1,5 @@
 <div align = "center">
-  <img src = "https://www.itba.edu.ar/intranet/comunicacion/wp-content/uploads/sites/7/2016/12/ITBA_Logo-01.png">
+  <img src = "https://github.com/ITBA-E3-2018/tp3-team-6/blob/master/Informe/logo.jpg?raw=true" width="265" height="106">
   </br></br>
 </div>
 <h1>
