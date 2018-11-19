@@ -1,5 +1,5 @@
 //This clock will model the FPGA's internal clock. 
-`timescale 1ns / 1ns
+//`timescale 1ns / 1ns
 module clock_gen(output reg clk);
 
 parameter PERIOD = 40;
