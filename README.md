@@ -29,5 +29,6 @@ Recuerden que aquí se esta empleando un lenguaje funcional y su naturaleza impl
 se realizan en simultaneo
 <div align = "center">
   <h2>Esquema de funcionamiento</h2>
+  </br>
   <img src = "https://github.com/ITBA-E3-2018/tpf-team-6/blob/master/ESQUEMA%20DE%20FUNCIONAMIENTO/Drawing1.png?raw=true">
 </div>
