@@ -17,12 +17,12 @@
 </h1>
 <h2>¿De qué se trata?</h2>
 El tp final de Electronica III se basa en desarrollar un cronómetro utilizando un lenguaje de descripción de hardware, 
-<a  href ="https://en.wikipedia.org/wiki/Hardware_description_language" target="_blank">HDL</a> por sus siglas en ingles. En nuestro caso empleamos 
-<a target="_blank" href ="https://es.wikipedia.org/wiki/Verilog"> Verilog</a>.
+<a  href ="https://en.wikipedia.org/wiki/Hardware_description_language">HDL</a> por sus siglas en ingles. En nuestro caso empleamos 
+<a  href ="https://es.wikipedia.org/wiki/Verilog"> Verilog</a>.
 <br> 
-El cronómetro opera sobre una <a target="_blank" href ="https://www.intel.com/content/www/us/en/products/programmable/fpga/cyclone-iv.html">FPGA Cyclone IV</a>.
-Con el fin de poder visualizar el mismo en acción se empleo un monitor con conexión <a target="_blank" href = "https://es.wikipedia.org/wiki/Video_Graphics_Array">VGA</a>.
-Para poder mostrar los digitos en pantalla se realizo una interfaz opera mediante el protocolo <a target="_blank" href = "https://es.wikipedia.org/wiki/Video_Graphics_Array">VGA</a> y una serie de modulos especialmente 
+El cronómetro opera sobre una <a  href ="https://www.intel.com/content/www/us/en/products/programmable/fpga/cyclone-iv.html">FPGA Cyclone IV</a>.
+Con el fin de poder visualizar el mismo en acción se empleo un monitor con conexión <a  href = "https://es.wikipedia.org/wiki/Video_Graphics_Array">VGA</a>.
+Para poder mostrar los digitos en pantalla se realizo una interfaz opera mediante el protocolo <a href = "https://es.wikipedia.org/wiki/Video_Graphics_Array">VGA</a> y una serie de modulos especialmente 
 diseñados para mostrar dibujar los digitos sobre la pantalla.
 Aquí debajo podran encontrar el esquema del programa.
 <br>
