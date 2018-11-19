@@ -1,3 +1,7 @@
+<div align = "center">
+  <img src = "https://www.itba.edu.ar/intranet/comunicacion/wp-content/uploads/sites/7/2016/12/ITBA_Logo-01.png">
+  </br></br>
+</div>
 <h1>
     <div align="center">
       <b>TP FINAL</b>
@@ -10,11 +14,6 @@
     <div align="center"><b>ELECTRONICA III</b></div>
   </br>
 </h1>
-
-<div align = "center">
-  <img src = "https://www.itba.edu.ar/intranet/comunicacion/wp-content/uploads/sites/7/2016/12/ITBA_Logo-01.png">
-  </br></br>
-</div>
 <h2>¿De qué se trata?</h2>
 El tp final de Electronica III se basa en desarrollar un cronómetro utilizando un lenguaje de descripción de hardware, 
 <a href ="https://en.wikipedia.org/wiki/Hardware_description_language">HDL</a> por sus siglas en ingles. En nuestro caso empleamos 
