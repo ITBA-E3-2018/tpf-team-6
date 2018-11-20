@@ -3,8 +3,6 @@
 //RESET: When "reset" is high the counters will go to zero in an asynchronous way.
 //START_STOP: When startStop changes its statuts the counting will start or stop arcodingly
 
-
-
 module time_counter(seconds,minutes,hours,reset,startStop,clock);
 	parameter yes = 1;
 	reg keepCounting  = 1;
@@ -32,6 +30,16 @@ module time_counter(seconds,minutes,hours,reset,startStop,clock);
 	//Detection of rising edge in clk_sec singal
 	always @(posedge clock)
 		begin
+		if(reset == 0)
+			begin
+				counter = 0;
+				seconds <= 0;
+				minutes <= 0;
+				hours	<=0;
+			end
+		if(startStop ==  1)
+			keepCounting = ~keepCounting;
+
 		if(keepCounting == yes)
 		begin
 				counter += 1;
@@ -60,13 +68,13 @@ module time_counter(seconds,minutes,hours,reset,startStop,clock);
 		end
 
 //When reset is pressed all values go to zero 
-	always@(posedge reset)
-		begin
-			counter = 0;
-			seconds <= 0;
-			minutes <= 0;
-			hours	<=0;
-		end
+	// always@(posedge reset)
+	// 	begin
+	// 		counter = 0;
+	// 		seconds <= 0;
+	// 		minutes <= 0;
+	// 		hours	<=0;
+	// 	end
 //When StartStop signal change it will start or either stop the counting
 always@(posedge startStop)
 	keepCounting = ~keepCounting;
