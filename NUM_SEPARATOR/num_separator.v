@@ -15,13 +15,56 @@ module num_separator(unidades,decenas,numero,update);
    
    //unidades y decenas will be updated wiht falliin edges from 'update' signal
     always @(negedge update)begin // combination logic
-    unidades = 0;
-    decenas = 0;
-        for(index = 0; index < 100; index = index + 1) begin
-            if((numero - unidades)%10 != 0) begin
-                 unidades = unidades + 1; 
-            end
+        unidades = 0;
+        decenas = 0;
+        if(decenas >= 10)begin
+            decenas = 10;
+            unidades = numero-10;
         end
-         decenas = (numero-unidades)/10;
+
+        else if(decenas >= 20)begin
+            decenas = 20;
+            unidades = numero-20;
+        end
+
+        else if(decenas >= 30)begin
+            decenas = 30;
+            unidades = numero-30;
+        end
+        else if(decenas >= 40)begin
+            decenas = 40;
+            unidades = numero-40;
+        end
+
+        else if(decenas >= 50)begin
+            decenas = 50;
+            unidades = numero-50;
+        end
+        
+        else if(decenas >= 60)begin
+            decenas = 60;
+            unidades = numero-60;
+        end
+
+        else if(decenas >= 70)begin
+            decenas = 70;
+            unidades = numero-70;
+        end
+
+        else if(decenas >= 80)begin
+            decenas = 80;
+            unidades = numero-10;
+        end
+
+        else if(decenas >= 90)begin
+            decenas = 90;
+            unidades = numero-90;
+        end
+        
+        else if(decenas < 10)begin
+            decenas = 0;
+            unidades = numero;
+        end
+
     end
 endmodule
