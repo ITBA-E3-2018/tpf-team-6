@@ -1,3 +1,4 @@
+`timescale 100us / 100us
 module hello_world;
 
   // My signal definitions
@@ -7,7 +8,7 @@ module hello_world;
   reg update = 0;
   wire clk;
   clock_gen clk_gen(clk);
-  num_separator num_sep(unidades,decenas,numero,clk);
+  num_separator num_sep(unidades,decenas,numero,update);
 
   integer index;
 
@@ -16,6 +17,9 @@ module hello_world;
     for(index = 0; index < 100; index = index + 1) begin
                 numero = index;
                 #1
+                update  = 1;
+                #1
+                update = 0;
                 $display("el numero es: %d,las decenas %d, las unidades %d",index,decenas,unidades);
             end
     $finish;

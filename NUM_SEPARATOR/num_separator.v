@@ -14,57 +14,49 @@ module num_separator(unidades,decenas,numero,update);
     integer index;
    
    //unidades y decenas will be updated wiht falliin edges from 'update' signal
-    always @(negedge update)begin // combination logic
+    always @(posedge update)begin // combination logic
         unidades = 0;
         decenas = 0;
-        if(decenas >= 10)begin
-            decenas = 10;
-            unidades = numero-10;
-        end
-
-        else if(decenas >= 20)begin
-            decenas = 20;
-            unidades = numero-20;
-        end
-
-        else if(decenas >= 30)begin
-            decenas = 30;
-            unidades = numero-30;
-        end
-        else if(decenas >= 40)begin
-            decenas = 40;
-            unidades = numero-40;
-        end
-
-        else if(decenas >= 50)begin
-            decenas = 50;
-            unidades = numero-50;
-        end
-        
-        else if(decenas >= 60)begin
-            decenas = 60;
-            unidades = numero-60;
-        end
-
-        else if(decenas >= 70)begin
-            decenas = 70;
-            unidades = numero-70;
-        end
-
-        else if(decenas >= 80)begin
-            decenas = 80;
-            unidades = numero-10;
-        end
-
-        else if(decenas >= 90)begin
-            decenas = 90;
+        // $display("%d",decenas);
+        if(numero >= 90)begin
+            decenas = 9;
             unidades = numero-90;
         end
-        
-        else if(decenas < 10)begin
+         else if(numero >= 80)begin
+            decenas = 8;
+            unidades = numero-80;
+        end
+        else if(numero >= 70)begin
+            decenas = 7;
+            unidades = numero-70;
+        end
+        else if(numero >= 60)begin
+            decenas = 6;
+            unidades = numero-60;
+        end
+        else if(numero >= 50)begin
+            decenas = 5;
+            unidades = numero-50;
+        end
+        else if(numero >= 40)begin
+            decenas = 4;
+            unidades = numero-40;
+        end
+        else if(numero >= 30)begin
+            decenas = 3;
+            unidades = numero-30;
+        end
+        else if(numero >= 20)begin
+            decenas = 2;
+            unidades = numero-20;
+        end
+        else if(numero >= 10)begin
+            decenas = 1;
+            unidades = numero-10;
+        end
+        else begin
             decenas = 0;
             unidades = numero;
         end
-
     end
 endmodule
