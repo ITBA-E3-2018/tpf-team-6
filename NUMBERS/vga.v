@@ -1,6 +1,6 @@
 module vga640x480(
     input wire i_clk,           // base clock
-    input wire i_rst,           // reset: restarts frame
+    // input wire i_rst,           // reset: restarts frame
     output wire o_hs,           // horizontal sync
     output wire o_vs,           // vertical sync
     output wire o_blanking,     // high during blanking interval
