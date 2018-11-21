@@ -8,10 +8,9 @@ module hello_world;
   wire drawPixel;
   wire[9:0] x;    //Current pixel x position
   wire[8:0] y;    //Current pixel y position
-  wire[5:0] num = 0;
-  wire[5:0] pos = 1;
-  reg[7:0] offset = 20;
-  singleNumber number(drawPixel,num,x,y,pos,offset,offset);
+  wire[7:0] num = 1;
+
+  singleNumber number(drawPixel,num,x,y);
   
   wire o_hs;
   wire o_vs;

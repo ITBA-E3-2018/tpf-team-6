@@ -13,7 +13,7 @@ module num_separator(unidades,decenas,numero,update);
     input update;
     integer index;
    
-   //unidades y decenas will be updated wiht falliin edges from 'update' signal
+   //unidades y decenas will be updated wiht falling edges from 'update' signal === NEW SCREEN START
     always @(posedge update)begin // combination logic
         unidades = 0;
         decenas = 0;

@@ -40,6 +40,7 @@ module vga640x480(
     // active: high during active pixel drawing
     assign o_active = ~((h_count < HA_STA) | (v_count > VA_END - 1)); 
 
+    //!Will be used as UPDATE signal for the display to update it's data 
     // screenend: high for one tick at the end of the screen
     assign o_screenend = ((v_count == SCREEN - 1) & (h_count == LINE));
 
@@ -48,13 +49,6 @@ module vga640x480(
 
     always @ (posedge i_clk)
     begin
-        // if (i_rst)  // reset to start of frame
-        // begin
-        //     h_count <= 0;
-        //     v_count <= 0;
-        // end
-        //if (i_pix_stb)  // once per pixel
-        //begin
             if (h_count == LINE)  // end of line
                 begin
                     h_count <= 0;
@@ -65,6 +59,5 @@ module vga640x480(
 
             if (v_count == SCREEN)  // end of screen
                 v_count <= 0;
-        //end
     end
 endmodule
