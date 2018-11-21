@@ -1,3 +1,4 @@
+//MODULO VGA
 module vga640x480(
     input wire i_clk,           // base clock
     input wire i_pix_stb,       // pixel clock strobe
@@ -47,23 +48,15 @@ module vga640x480(
 
     always @ (posedge i_clk)
     begin
-        // if (i_rst)  // reset to start of frame
-        // begin
-        //     h_count <= 0;
-        //     v_count <= 0;
-        // end
-        //if (i_pix_stb)  // once per pixel
-        //begin
-            if (h_count == LINE)  // end of line
-                begin
-                    h_count <= 0;
-                    v_count <= v_count + 1;
-                end
-            else 
-                h_count <= h_count + 1;
+        if (h_count == LINE)  // end of line
+            begin
+                h_count <= 0;
+                v_count <= v_count + 1;
+            end
+        else 
+            h_count <= h_count + 1;
 
-            if (v_count == SCREEN)  // end of screen
-                v_count <= 0;
-        //end
+        if (v_count == SCREEN)  // end of screen
+            v_count <= 0;
     end
 endmodule
