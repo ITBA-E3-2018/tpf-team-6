@@ -55,10 +55,10 @@ Cada contador tiene como salida su correspondiente medida de tiempo representada
   Para poder comunicarle al monitor cual sera la resolución de trabajo debemos respectar un cierto protocolo que involucra dos señales de sincronismo.
   <br>
   <div align = "center">
-    <img src = "https://timetoexplore.net/s/vga640x480.jpg" width =  300 height = 300>
+    <img src = "https://timetoexplore.net/s/vga640x480.jpg" height = 300>
   </div>
 <div align = "center">
-  <img src = "http://blogs.fsfe.org/pboddie/files/2017/05/vga_timing1.png" width = 300 height = 300>
+  <img src = "http://blogs.fsfe.org/pboddie/files/2017/05/vga_timing1.png"  height = 300>
 </div>
 <h3>¡Hora de graficar!<h4>
   
