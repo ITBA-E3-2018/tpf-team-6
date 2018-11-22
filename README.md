@@ -57,6 +57,8 @@ Cada contador tiene como salida su correspondiente medida de tiempo representada
   <div align = "center">
     <img src = "https://timetoexplore.net/s/vga640x480.jpg" width =  500 height = 500>
   </div>
-
+<div align = "center">
+  <img src = "http://blogs.fsfe.org/pboddie/files/2017/05/vga_timing1.png">
+</div>
 <h3>¡Hora de graficar!<h4>
   
