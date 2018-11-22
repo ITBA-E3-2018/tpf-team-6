@@ -59,8 +59,14 @@ Cada contador tiene como salida su correspondiente medida de tiempo representada
     <img src = "https://timetoexplore.net/s/vga640x480.jpg" height = 300>
   <a>
   </div>
+    
+    Aquí debajo se pueden apreciar ambas señales al mismo tiempo. Notese que la zona verde indica la zona visible.
 <div align = "center">
   <img src = "http://blogs.fsfe.org/pboddie/files/2017/05/vga_timing1.png"  height = 300>
 </div>
-<h3>¡Hora de graficar!<h4>
-  
+<h3>¡Hora de graficar!<h3>
+  Dadas las señales de sincronización, el monitor comenzara su barrido a través de la pantalla. Para esto, el modulo <b>VGA</b> nos provee de la coordenadas actuales sobre las que esta el cursor del monitor. Es decir, al avanzar dos señales indicaran en que posición relativa al extremo superior izquierdo esta actualmente el cursor.
+  <br>
+Una vez obtenido dicho dato, se debe poder discernir qué graficar (qué número) y dondé.
+  <h4>Seleccionando el número<h4>
+    Para poder seleccionar el número adecuado a graficar debemos poder leer la data enviada por el modulo <b>separador de digito<b>. Este actualizara su información una vez por barrido completo de la pantalla. De esta forma evitamos imprevistos durante el proceso de dibujo. Por ejemplo, el digito de los segundo podría cambiar durante el barrido causando que la imagen no se vea correctamente.
