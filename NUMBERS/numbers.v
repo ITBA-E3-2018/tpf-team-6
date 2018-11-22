@@ -19,7 +19,8 @@ module singleNumber(drawPixel,num,x,y);
 
     parameter square = 20;
 
-
+//TEMPLATES FOR MAKING NUMBERS!
+	
 //     //FIRST ROW
 //     if(y >= yOffset && y < yOffset + square)
 
@@ -37,21 +38,22 @@ module singleNumber(drawPixel,num,x,y);
 
 
 //     //FIRST COLUMN
-//     if(x >= xOffset &&  x <= square + xOffset)
+//     if(x > xOffset &&  x < square + xOffset)
         
 //     //SECOND COLUMN
-//     if(x >= xOffset + square && x <= 2*square + xOffset)
+//     if(x > xOffset + square && x < 2*square + xOffset)
 
 //     //THIRD COLUMN
-//     if(x >= xOffset + 2*square && x <= 3*square + xOffset)
+//     if(x > xOffset + 2*square && x < 3*square + xOffset)
 
     //Checking position, this line will determine which character the cursor is currently on.
     always @* begin
-    if( x > (xOffset + square*(pos-1)) && x < (xOffset + square*pos))
+    if( x > (xOffset + square*(pos-1)) && x < (xOffset + 3*square*pos))
     begin
+			drawPixel  = 0;
         if(num == 0)begin
           //FIRST COLUMN
-          if(x >= xOffset &&  x <= square + xOffset)begin
+          if(x > xOffset &&  x < square + xOffset)begin
                //FIRST ROW
                if(y >= yOffset && y < yOffset + square)
                     drawPixel  = 1;                
@@ -69,16 +71,16 @@ module singleNumber(drawPixel,num,x,y);
                     drawPixel  = 1;
           end
           //SECOND COLUMN    
-          else if(x >= xOffset + square && x <= 2*square + xOffset)begin
+          else if(x > xOffset + square && x < 2*square + xOffset)begin
                //FIRST ROW
-               if(y >= yOffset && y < yOffset + square)
+               if(y >= yOffset && y < (yOffset + square))
                     drawPixel  = 1;
                //FIFTH ROW
-               if(y > yOffset + 4*square && y < yOffset + 5*square)
+               if(y > (yOffset + 4*square) && y < (yOffset + 5*square))
                     drawPixel  = 1;
           end
           //THIRD COLUMN  
-          else if(x >= xOffset + 2*square && x <= 3*square + xOffset)begin
+          else if(x > xOffset + 2*square && x < 3*square + xOffset)begin
                //FIRST ROW
                if(y >= yOffset && y < yOffset + square)
                     drawPixel  = 1;                
@@ -101,7 +103,7 @@ module singleNumber(drawPixel,num,x,y);
 
         if(num == 1)begin
           //FIRST COLUMN
-          if(x >= xOffset &&  x <= square + xOffset)begin
+          if(x > xOffset &&  x < square + xOffset)begin
                //FIRST ROW
                if(y >= yOffset && y < yOffset + square)
                     drawPixel  = 1;                
@@ -110,7 +112,7 @@ module singleNumber(drawPixel,num,x,y);
                     drawPixel  = 1;
           end
           //SECOND COLUMN    
-          else if(x >= xOffset + square && x <= 2*square + xOffset)begin
+          else if(x > xOffset + square && x < 2*square + xOffset)begin
                //FIRST ROW
                if(y >= yOffset && y < yOffset + square)
                     drawPixel  = 1;                
@@ -128,7 +130,7 @@ module singleNumber(drawPixel,num,x,y);
                     drawPixel  = 1;
           end
           //THIRD COLUMN  
-          else if(x >= (xOffset + 2*square) && x <= (3*square + xOffset))begin
+          else if(x > (xOffset + 2*square) && x < (3*square + xOffset))begin
                //FIFTH ROW
                if(y > (yOffset + 4*square) && y < (yOffset + 5*square))
                     drawPixel  = 1;
@@ -137,9 +139,9 @@ module singleNumber(drawPixel,num,x,y);
                drawPixel  = 0;
         end
   
-        if(num == 2)begin 
+        if(num == 2 )begin 
             //FIRST COLUMN
-            if(x >= xOffset &&  x <= square + xOffset)begin
+            if(x > xOffset &&  x < square + xOffset)begin
                 //FIRST ROW
                 if(y >= yOffset && y < yOffset + square)
                      drawPixel  = 1;
@@ -154,7 +156,7 @@ module singleNumber(drawPixel,num,x,y);
                      drawPixel  = 1;
             end
             //SECOND COLUMN    
-            else if(x >= xOffset + square && x <= 2*square + xOffset)begin
+            else if(x > xOffset + square && x < 2*square + xOffset)begin
                 //FIRST ROW
                 if(y >= yOffset && y < yOffset + square)
                      drawPixel  = 1;
@@ -166,7 +168,7 @@ module singleNumber(drawPixel,num,x,y);
                      drawPixel  = 1;
             end
             //THIRD COLUMN  
-            else if(x >= xOffset + 2*square && x <= 3*square + xOffset)begin
+            else if(x > xOffset + 2*square && x < 3*square + xOffset)begin
                 //FIRST ROW
                 if(y >= yOffset && y < yOffset + square)
                       drawPixel  = 1;                
@@ -183,10 +185,10 @@ module singleNumber(drawPixel,num,x,y);
             else
                  drawPixel  = 0;
         end
-        
+		 
         if(num == 3)begin
           //FIRST COLUMN
-          if(x >= xOffset &&  x <= square + xOffset)begin
+          if(x > xOffset &&  x < square + xOffset)begin
                //FIRST ROW
                if(y >= yOffset && y < yOffset + square)
                     drawPixel  = 1;
@@ -198,7 +200,7 @@ module singleNumber(drawPixel,num,x,y);
                     drawPixel  = 1;
           end
           //SECOND COLUMN    
-          else if(x >= xOffset + square && x <= 2*square + xOffset)begin
+          else if(x > xOffset + square && x < 2*square + xOffset)begin
                //FIRST ROW
                if(y >= yOffset && y < yOffset + square)
                     drawPixel  = 1;
@@ -210,7 +212,7 @@ module singleNumber(drawPixel,num,x,y);
                     drawPixel  = 1;
           end
           //THIRD COLUMN  
-          else if(x >= xOffset + 2*square && x <= 3*square + xOffset)begin
+          else if(x > xOffset + 2*square && x < 3*square + xOffset)begin
                //FIRST ROW
                if(y >= yOffset && y < yOffset + square)
                     drawPixel  = 1;                
@@ -233,30 +235,30 @@ module singleNumber(drawPixel,num,x,y);
 
         if(num == 4)begin
           //FIRST COLUMN
-          if(x >= xOffset &&  x <= square + xOffset)begin
+          if(x > xOffset &&  x < square + xOffset)begin
                //FIRST ROW
                if(y >= yOffset && y < yOffset + square)
                     drawPixel  = 1;
                //SECOND ROW
-               if(y > yOffset + square && y < yOffset + 2*square)
+					else if(y > yOffset + square && y < yOffset + 2*square)
                     drawPixel  = 1;
                //THIRD ROW
-               if(y > yOffset + 2*square && y < yOffset + 3*square)
+               else if(y > yOffset + 2*square && y < yOffset + 3*square)
                     drawPixel  = 1;
           end
           //SECOND COLUMN    
-          else if(x >= xOffset + square && x <= 2*square + xOffset)begin
-               //SECOND ROW
-               if(y > yOffset + square && y < yOffset + 2*square)
+          else if(x > xOffset + square && x < 2*square + xOffset)begin
+					//THIRD ROW
+					if(y > yOffset + 2*square && y < yOffset + 3*square)
                     drawPixel  = 1;
           end
           //THIRD COLUMN  
-          else if(x >= xOffset + 2*square && x <= 3*square + xOffset)begin
+          else if(x > xOffset + 2*square && x < 3*square + xOffset)begin
                //FIRST ROW
-               if(y >= yOffset && y < yOffset + square)
+               if(y > yOffset && y < yOffset + square)
                     drawPixel  = 1;    
                //SECOND ROW
-               if(y >= yOffset + square && y < yOffset + 2*square)
+               if(y > yOffset + square && y < yOffset + 2*square)
                     drawPixel  = 1;            
                //THIRD ROW
                else if(y > yOffset + 2*square && y < yOffset + 3*square)
@@ -274,7 +276,7 @@ module singleNumber(drawPixel,num,x,y);
 
         if(num == 5)begin
           //FIRST COLUMN
-          if(x >= xOffset &&  x <= square + xOffset)begin
+          if(x > xOffset &&  x < square + xOffset)begin
                //FIRST ROW
                if(y >= yOffset && y < yOffset + square)
                     drawPixel  = 1;
@@ -289,19 +291,21 @@ module singleNumber(drawPixel,num,x,y);
                     drawPixel  = 1;
           end
           //SECOND COLUMN    
-          else if(x >= xOffset + square && x <= 2*square + xOffset)begin
-               //FIRST ROW
-               if(y >= yOffset && y < yOffset + square)
-                    drawPixel  = 1;
-               //THIRD ROW
-               else if(y > yOffset + 2*square && y < yOffset + 3*square)
-                    drawPixel  = 1;
-               //FIFTH ROW
-               else if(y > yOffset + 4*square && y < yOffset + 5*square)
-                    drawPixel  = 1;
+          else if(x > xOffset + square && x < 2*square + xOffset)begin
+    
+					//FIRST ROW
+                if(y >= yOffset && y < yOffset + square)
+                     drawPixel  = 1;
+                //THIRD ROW
+                else if(y > yOffset + 2*square && y < yOffset + 3*square)
+                     drawPixel  = 1;
+                //FIFTH ROW
+                else if(y > yOffset + 4*square && y < yOffset + 5*square)
+                     drawPixel  = 1;	  
+						  
           end
           //THIRD COLUMN  
-          else if(x >= xOffset + 2*square && x <= 3*square + xOffset)begin
+          else if(x > xOffset + 2*square && x < 3*square + xOffset)begin
                //FIRST ROW
                if(y >= yOffset && y < yOffset + square)
                     drawPixel  = 1;            
@@ -321,7 +325,7 @@ module singleNumber(drawPixel,num,x,y);
 
         if(num == 6)begin
           //FIRST COLUMN
-          if(x >= xOffset &&  x <= square + xOffset)begin
+          if(x > xOffset &&  x < square + xOffset)begin
                //FIRST ROW
                if(y >= yOffset && y < yOffset + square)
                     drawPixel  = 1;
@@ -339,7 +343,7 @@ module singleNumber(drawPixel,num,x,y);
                     drawPixel  = 1;
           end
           //SECOND COLUMN    
-          else if(x >= xOffset + square && x <= 2*square + xOffset)begin
+          else if(x > xOffset + square && x < 2*square + xOffset)begin
                //FIRST ROW
                if(y >= yOffset && y < yOffset + square)
                     drawPixel  = 1;
@@ -351,7 +355,7 @@ module singleNumber(drawPixel,num,x,y);
                     drawPixel  = 1;
           end
           //THIRD COLUMN  
-          else if(x >= xOffset + 2*square && x <= 3*square + xOffset)begin
+          else if(x > xOffset + 2*square && x < 3*square + xOffset)begin
                //FIRST ROW
                if(y >= yOffset && y < yOffset + square)
                     drawPixel  = 1;            
@@ -371,13 +375,13 @@ module singleNumber(drawPixel,num,x,y);
 
         if(num == 7)begin
           //FIRST COLUMN
-          if(x >= xOffset &&  x <= square + xOffset)begin
+          if(x > xOffset &&  x < square + xOffset)begin
                //FIRST ROW
                if(y >= yOffset && y < yOffset + square)
                     drawPixel  = 1;
           end
           //SECOND COLUMN    
-          else if(x >= xOffset + square && x <= 2*square + xOffset)begin
+          else if(x > xOffset + square && x < 2*square + xOffset)begin
                //FIRST ROW
                if(y >= yOffset && y < yOffset + square)
                     drawPixel  = 1;
@@ -386,10 +390,13 @@ module singleNumber(drawPixel,num,x,y);
                     drawPixel  = 1;
           end
           //THIRD COLUMN  
-          else if(x >= xOffset + 2*square && x <= 3*square + xOffset)begin
+          else if(x > xOffset + 2*square && x < 3*square + xOffset)begin
                //FIRST ROW
                if(y >= yOffset && y < yOffset + square)
-                    drawPixel  = 1;            
+                    drawPixel  = 1; 
+					//SECOND ROW
+               if(y > yOffset + square && y < yOffset + 2*square)
+                    drawPixel  = 1;						  
                //THIRD ROW
                else if(y > yOffset + 2*square && y < yOffset + 3*square)
                     drawPixel  = 1;
@@ -406,7 +413,7 @@ module singleNumber(drawPixel,num,x,y);
 
         if(num == 8)begin
           //FIRST COLUMN
-          if(x >= xOffset &&  x <= square + xOffset)begin
+          if(x > xOffset &&  x < square + xOffset)begin
                //FIRST ROW
                if(y >= yOffset && y < yOffset + square)
                     drawPixel  = 1;                
@@ -424,7 +431,7 @@ module singleNumber(drawPixel,num,x,y);
                     drawPixel  = 1;
           end
           //SECOND COLUMN    
-          else if(x >= xOffset + square && x <= 2*square + xOffset)begin
+          else if(x > xOffset + square && x < 2*square + xOffset)begin
                //FIRST ROW
                if(y >= yOffset && y < yOffset + square)
                     drawPixel  = 1;
@@ -436,7 +443,7 @@ module singleNumber(drawPixel,num,x,y);
                     drawPixel  = 1;
           end
           //THIRD COLUMN  
-          else if(x >= xOffset + 2*square && x <= 3*square + xOffset)begin
+          else if(x > xOffset + 2*square && x < 3*square + xOffset)begin
                //FIRST ROW
                if(y >= yOffset && y < yOffset + square)
                     drawPixel  = 1;                
@@ -459,7 +466,7 @@ module singleNumber(drawPixel,num,x,y);
           
         if(num == 9)begin
           //FIRST COLUMN
-          if(x >= xOffset &&  x <= square + xOffset)begin
+          if(x > xOffset &&  x < square + xOffset)begin
                //FIRST ROW
                if(y >= yOffset && y < yOffset + square)
                     drawPixel  = 1;                
@@ -471,7 +478,7 @@ module singleNumber(drawPixel,num,x,y);
                     drawPixel  = 1;
           end
           //SECOND COLUMN    
-          else if(x >= xOffset + square && x <= 2*square + xOffset)begin
+          else if(x > xOffset + square && x < 2*square + xOffset)begin
                //FIRST ROW
                if(y >= yOffset && y < yOffset + square)
                     drawPixel  = 1;
@@ -480,7 +487,7 @@ module singleNumber(drawPixel,num,x,y);
                     drawPixel  = 1;
           end
           //THIRD COLUMN  
-          else if(x >= xOffset + 2*square && x <= 3*square + xOffset)begin
+          else if(x > xOffset + 2*square && x < 3*square + xOffset)begin
                //FIRST ROW
                if(y >= yOffset && y < yOffset + square)
                     drawPixel  = 1;                
@@ -500,47 +507,11 @@ module singleNumber(drawPixel,num,x,y);
           else
                drawPixel  = 0;
         end
-    end
+
+ end
     else
      drawPixel  = 0;
 
 end
 endmodule
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-    //FIRST ROW
-    // if(y >= yOffset && y < yOffset + square)
-
-    //SECOND ROW
-    // if(y > yOffset + square && y < yOffset +2*square)
-
-    //THIRD ROW
-    // if(y > yOffset + 2*square && y < yOffset + 3*square)
-
-    //FOURTH ROW
-    // if(y > yOffset + 3*square && y < yOffset + 4*square)
-
-    //FIFTH ROW
-    // if(y > yOffset + 4*square && y < yOffset + 5*square)
-
-
-    //FIRST COLUMN
-    // if(x >= xOffset &&  x <= square + xOffset)
-
-    //SECOND COLUMN
-    // if(x >= xOffset + square && x <= 2*square + xOffset)
-
-    //THIRD COLUMN
-    // if(x >= xOffset + 2*square && x <= 3*square + xOffset)
