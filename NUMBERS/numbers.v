@@ -19,7 +19,8 @@ module singleNumber(drawPixel,num,x,y);
 
     parameter square = 20;
 
-
+//TEMPLATES FOR MAKING NUMBERS!
+	
 //     //FIRST ROW
 //     if(y >= yOffset && y < yOffset + square)
 
