@@ -13,9 +13,9 @@ module singleNumber(drawPixel,num,x,y);
     input [9:0] x; //Posición actual en la pantalla X
     input [8:0] y; //Posición actual en la pantalla Y
     input [7:0] num; //Number to display
-    parameter pos = 0; //Number to display
-    parameter xOffset = 0;
-    parameter yOffset = 0;
+    parameter pos = 5; //Number to display
+    parameter xOffset = 200;
+    parameter yOffset = 200;
 
     parameter square = 20;
 
@@ -500,9 +500,6 @@ module singleNumber(drawPixel,num,x,y);
           else
                drawPixel  = 0;
         end
-
-
-
     end
     else
      drawPixel  = 0;
