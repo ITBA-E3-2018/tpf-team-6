@@ -76,4 +76,7 @@ Para poder graficar se diseño a cada número como un conjunto de cuadrados que 
 <img src = "https://github.com/ITBA-E3-2018/tpf-team-6/blob/master/ESQUEMA%20DE%20FUNCIONAMIENTO/digitos.jpeg?raw=true">
 </div>
 Ahora, con el fin de poder mostrar el número en pantalla se diseñaron modulos que permiten graficar los digitos individualmente. Cada uno de esos modulos tiene toda la información necesaria como para poder saber su ubicación relativa en la pantalla.
+<div align = "center">
+  <img src ="https://github.com/ITBA-E3-2018/tpf-team-6/blob/master/ESQUEMA%20DE%20FUNCIONAMIENTO/SingleNumber.PNG?raw=true">
+</div>
 
