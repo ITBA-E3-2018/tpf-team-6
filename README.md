@@ -52,10 +52,12 @@ Cada contador tiene como salida su correspondiente medida de tiempo representada
 </div>
 <br>
 <h3>Modulo VGA</h3>
-  Para poder comunicarle al monitor cual sera la resolución de trabajo debemos respectar un cierto protocolo que involucra dos señales de sincronismo.
+  Para poder comunicarle al monitor cual sera la resolución de trabajo debemos respetar un cierto protocolo que involucra dos señales de sincronismo.
   <br>
   <div align = "center">
+  <a href = "https://timetoexplore.net/s/vga640x480.jpg">
     <img src = "https://timetoexplore.net/s/vga640x480.jpg" height = 300>
+  <a>
   </div>
 <div align = "center">
   <img src = "http://blogs.fsfe.org/pboddie/files/2017/05/vga_timing1.png"  height = 300>
