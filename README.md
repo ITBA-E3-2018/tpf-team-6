@@ -47,6 +47,9 @@ Nuestro objetivo es poder contar el tiempo haciendo uso de un unico clock maestr
 <h3>Separador de digitos</h3>
 Si bien ya podemos contar el tiempo nos hace falta un elemento fundamental para poder ver el cronómetro en acción, los digitos. Sería muy ineficiente en terminos de memoria alojar cada posibilidad tiempo que pudiese ocurrir. Por lo tanto debemos saber qué digitos representan el tiempo.
 Cada contador tiene como salida su correspondiente medida de tiempo representada como un entero (un arreglo de bits siendo más tecnico). Un modulo decodificador se encarga de separarlo en <b>decenas</b> y <b>unidades</b> para luego ser procesados y comenzar su viaje hacia el monitor.
+<div align = "center">
+  <img src = "https://github.com/ITBA-E3-2018/tpf-team-6/blob/master/ESQUEMA%20DE%20FUNCIONAMIENTO/NumSep.PNG?raw=true" height = 200>
+</div>
 
 <h3>Modulo VGA<h3>
 <h4>Señales de Sincronismo<h4>
