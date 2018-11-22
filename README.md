@@ -24,6 +24,7 @@ El cronómetro opera sobre una <a  href ="https://www.intel.com/content/www/us/e
 Con el fin de poder visualizar el mismo en acción se empleo un monitor con conexión <a  href = "https://es.wikipedia.org/wiki/Video_Graphics_Array">VGA</a>.
 Para poder mostrar los digitos en pantalla se realizo una interfaz opera mediante el protocolo <a href = "https://es.wikipedia.org/wiki/Video_Graphics_Array">VGA</a> y una serie de modulos especialmente 
 diseñados para mostrar dibujar los digitos sobre la pantalla.
+
 Aquí debajo podran encontrar el esquema del programa.
 <br>
 Recuerden que aquí se esta empleando un lenguaje funcional y su naturaleza implica que la ejecución de sus diferente modulos 
@@ -48,7 +49,7 @@ Nuestro objetivo es poder contar el tiempo haciendo uso de un unico clock maestr
 Si bien ya podemos contar el tiempo nos hace falta un elemento fundamental para poder ver el cronómetro en acción, los digitos. Sería muy ineficiente en terminos de memoria alojar cada posibilidad tiempo que pudiese ocurrir. Por lo tanto debemos saber qué digitos representan el tiempo.
 Cada contador tiene como salida su correspondiente medida de tiempo representada como un entero (un arreglo de bits siendo más tecnico). Un modulo decodificador se encarga de separarlo en <b>decenas</b> y <b>unidades</b> para luego ser procesados y comenzar su viaje hacia el monitor.
 <div align = "center">
-  <img src = "https://github.com/ITBA-E3-2018/tpf-team-6/blob/master/ESQUEMA%20DE%20FUNCIONAMIENTO/NumSep.PNG?raw=true" height = 200>
+  <img src = "https://github.com/ITBA-E3-2018/tpf-team-6/blob/master/ESQUEMA%20DE%20FUNCIONAMIENTO/NumSep.PNG?raw=true">
 </div>
 <br>
 <h3>Modulo VGA</h3>
