@@ -74,7 +74,7 @@ Aquí debajo se pueden apreciar ambas señales al mismo tiempo. Notese que la zo
   <br>
 Una vez obtenido dicho dato, se debe poder discernir qué graficar (qué número) y dondé.
     
-  <h4>Seleccionando el número</h4>
+<h4>Seleccionando el número</h4>
   
 Para poder seleccionar el número adecuado a graficar debemos poder leer la data enviada por el modulo <b>separador de digito<b>. Este actualizara su información una vez por barrido completo de la pantalla. De esta forma evitamos imprevistos durante el proceso de dibujo. Por ejemplo, el digito de los segundo podría cambiar durante el barrido causando que la imagen no se vea correctamente.
 
@@ -95,6 +95,7 @@ Ahora, con el fin de poder mostrar el número en pantalla se diseñaron modulos 
 Al poder leer los pares <b> x,y <b> es posible determinar si deben emitir un pulso de dibujo o no deben hacerlo.
   
 <h3>Recursos de gran ayuda</h3>
-<a href ="https://www.youtube.com/watch?v=MIxL2fNw2os">Tutorial Quartus by Sebas</a><br>
-  Introducción a VGA con verilog en <a href ="https://timetoexplore.net">https://timetoexplore.net</a>
-  
+<ul>
+  <li><a href ="https://www.youtube.com/watch?v=MIxL2fNw2os">Tutorial Quartus by Sebas</a></li>
+  <li>Introducción a VGA con verilog en <a href ="https://timetoexplore.net">https://timetoexplore.net</a></li>
+</ul>
