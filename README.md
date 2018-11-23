@@ -94,6 +94,11 @@ Ahora, con el fin de poder mostrar el número en pantalla se diseñaron modulos 
 
 Al poder leer los pares <b> x,y </b> es posible determinar si deben emitir un pulso de dibujo o no deben hacerlo.
   
+  
+<h3>¡Funciona!</h3>
+Pueden verlo en acción haciendo click <a href ="https://www.youtube.com/watch?v=NC7Mk_q6Vmk&feature=youtu.be">aquí</a>.
+
+
 <h3>Recursos de gran ayuda</h3>
 <ul>
   <li><a href ="https://www.youtube.com/watch?v=MIxL2fNw2os">Tutorial Quartus by Sebas</a></li>
