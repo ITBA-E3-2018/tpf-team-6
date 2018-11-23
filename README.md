@@ -92,7 +92,7 @@ Ahora, con el fin de poder mostrar el número en pantalla se diseñaron modulos 
   <img src ="https://github.com/ITBA-E3-2018/tpf-team-6/blob/master/ESQUEMA%20DE%20FUNCIONAMIENTO/SingleNumber.PNG?raw=true">
 </div>
 
-Al poder leer los pares <b> x,y <b> es posible determinar si deben emitir un pulso de dibujo o no deben hacerlo.
+Al poder leer los pares <b> x,y </b> es posible determinar si deben emitir un pulso de dibujo o no deben hacerlo.
   
 <h3>Recursos de gran ayuda</h3>
 <ul>
