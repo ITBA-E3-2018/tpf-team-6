@@ -76,7 +76,7 @@ Una vez obtenido dicho dato, se debe poder discernir qué graficar (qué número
     
 <h4>Seleccionando el número</h4>
   
-Para poder seleccionar el número adecuado a graficar debemos poder leer la data enviada por el modulo <b>separador de digito<b>. Este actualizara su información una vez por barrido completo de la pantalla. De esta forma evitamos imprevistos durante el proceso de dibujo. Por ejemplo, el digito de los segundo podría cambiar durante el barrido causando que la imagen no se vea correctamente.
+Para poder seleccionar el número adecuado a graficar debemos poder leer la data enviada por el modulo <b>separador de digito</b>. Este actualizara su información una vez por barrido completo de la pantalla. De esta forma evitamos imprevistos durante el proceso de dibujo. Por ejemplo, el digito de los segundo podría cambiar durante el barrido causando que la imagen no se vea correctamente.
 
 <h4> Graficando</h4>
 Para poder graficar se diseño a cada número como un conjunto de cuadrados que ilustran el digito.
