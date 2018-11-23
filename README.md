@@ -17,7 +17,7 @@
 </h1>
 
 <div align = "center">
-  <img src ="https://core-electronics.com.au/media/catalog/product/cache/1/image/650x650/fe1bcd18654db18f328c2faaaf3c690a/4/5/451-02.jpg" width = 300 heigth = 300>
+  <img src ="https://core-electronics.com.au/media/catalog/product/cache/1/image/650x650/fe1bcd18654db18f328c2faaaf3c690a/4/5/451-02.jpg" width = 300 heigth = 300><br>
   Placa de desarrollo Cyclone IV
   </div>
 <h2>¿De qué se trata?</h2>
@@ -84,14 +84,16 @@ Para poder graficar se diseño a cada número como un conjunto de cuadrados que 
 <img src = "https://github.com/ITBA-E3-2018/tpf-team-6/blob/master/ESQUEMA%20DE%20FUNCIONAMIENTO/digitos.jpeg?raw=true">
 </div>
 <br>
+
 Ahora, con el fin de poder mostrar el número en pantalla se diseñaron modulos que permiten graficar los digitos individualmente. Cada uno de esos modulos tiene toda la información necesaria como para poder saber su ubicación relativa en la pantalla.
+
 <br>
 <div align = "center">
   <img src ="https://github.com/ITBA-E3-2018/tpf-team-6/blob/master/ESQUEMA%20DE%20FUNCIONAMIENTO/SingleNumber.PNG?raw=true">
 </div>
-  Al poder leer los pares <b> x,y <b> es posible determinar si deben emitir un pulso de dibujo o no deben hacerlo.
-  
 
+Al poder leer los pares <b> x,y <b> es posible determinar si deben emitir un pulso de dibujo o no deben hacerlo.
+  
 <h3>Recursos de gran ayuda</h3>
 <a href ="https://www.youtube.com/watch?v=MIxL2fNw2os">Tutorial Quartus by Sebas</a><br>
   Introducción a VGA con verilog en <a href ="https://timetoexplore.net">https://timetoexplore.net</a>
