@@ -15,6 +15,11 @@
     </div>
   
 </h1>
+
+<div align = "center">
+  <img src ="https://core-electronics.com.au/media/catalog/product/cache/1/image/650x650/fe1bcd18654db18f328c2faaaf3c690a/4/5/451-02.jpg" width = 300 heigth = 300>
+  Placa de desarrollo Cyclone IV
+  </div>
 <h2>¿De qué se trata?</h2>
 El tp final de Electronica III se basa en desarrollar un cronómetro utilizando un lenguaje de descripción de hardware, 
 <a  href ="https://en.wikipedia.org/wiki/Hardware_description_language">HDL</a> por sus siglas en ingles. En nuestro caso empleamos 
@@ -71,7 +76,7 @@ Una vez obtenido dicho dato, se debe poder discernir qué graficar (qué número
     
   <h4>Seleccionando el número</h4>
   
-    Para poder seleccionar el número adecuado a graficar debemos poder leer la data enviada por el modulo <b>separador de digito<b>. Este actualizara su información una vez por barrido completo de la pantalla. De esta forma evitamos imprevistos durante el proceso de dibujo. Por ejemplo, el digito de los segundo podría cambiar durante el barrido causando que la imagen no se vea correctamente.
+Para poder seleccionar el número adecuado a graficar debemos poder leer la data enviada por el modulo <b>separador de digito<b>. Este actualizara su información una vez por barrido completo de la pantalla. De esta forma evitamos imprevistos durante el proceso de dibujo. Por ejemplo, el digito de los segundo podría cambiar durante el barrido causando que la imagen no se vea correctamente.
 
 <h4> Graficando</h4>
 Para poder graficar se diseño a cada número como un conjunto de cuadrados que ilustran el digito.
@@ -87,3 +92,7 @@ Ahora, con el fin de poder mostrar el número en pantalla se diseñaron modulos 
   Al poder leer los pares <b> x,y <b> es posible determinar si deben emitir un pulso de dibujo o no deben hacerlo.
   
 
+<h3>Recursos de gran ayuda</h3>
+<a href ="https://www.youtube.com/watch?v=MIxL2fNw2os">Tutorial Quartus by Sebas</a><br>
+  Introducción a VGA con verilog en <a href ="https://timetoexplore.net">https://timetoexplore.net</a>
+  
