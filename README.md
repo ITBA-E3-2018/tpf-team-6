@@ -96,8 +96,10 @@ Al poder leer los pares <b> x,y </b> es posible determinar si deben emitir un pu
   
   
 <h3>¡Funciona!</h3>
+<div align = "center">
+  <img src = "https://github.com/ITBA-E3-2018/tpf-team-6/blob/master/ESQUEMA%20DE%20FUNCIONAMIENTO/finalResult.png?raw=true">
+  </div>
 Pueden verlo en acción haciendo click <a href ="https://www.youtube.com/watch?v=NC7Mk_q6Vmk&feature=youtu.be">aquí</a>.
-
 
 <h3>Recursos de gran ayuda</h3>
 <ul>
